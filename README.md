@@ -19,11 +19,9 @@ The project uses **Python**, **pandas**, **pymysql**, and **multithreading** for
    ```bash
    python --version
    
-## VS Code (recommended IDE)
+### VS Code (recommended IDE)
 
-## Install required libraries
-
-## MySQL Server running locally or remotely.
+### Install required libraries
 
 ## Project files:
 
