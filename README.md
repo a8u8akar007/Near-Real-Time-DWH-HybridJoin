@@ -18,15 +18,12 @@ The project uses **Python**, **pandas**, **pymysql**, and **multithreading** for
    Verify installation:
    ```bash
    python --version
-
+   
 ## VS Code (recommended IDE)
 
-#### Install required libraries
+## Install required libraries
 
-#### pip install pandas pymysql
-
-
-MySQL Server running locally or remotely.
+## MySQL Server running locally or remotely.
 
 ## Project files:
 
