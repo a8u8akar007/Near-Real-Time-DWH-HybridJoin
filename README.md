@@ -1,34 +1,39 @@
-# walmart-sales-datawarehouse
-Retail Data Warehouse using MySQL and Python — A complete end-to-end Data Warehouse project for retail sales analysis, featuring a star schema design, automated ETL pipeline, and analytical SQL queries for business insights.
+# 🚀 Hybrid Join Data Warehousing Project
 
----
+This project implements a **Hybrid Join strategy** within an automated ETL pipeline to load and enrich retail sales data into a MySQL Star Schema Data Warehouse. The goal is to efficiently process high-volume transactional data by leveraging in-memory hash tables for dimension lookups.
 
-# Hybrid Join Data Warehousing Project
+## 📋 Project Overview
 
-## Project Overview
-This project implements a **Hybrid Join** for a retail-like scenario. It loads master data (customers, products, stores, suppliers, dates) and transactional data into a **star schema** in MySQL. It then performs a hybrid join between streamed transactional data and customer data using an **in-memory hash table** and a disk buffer, writing enriched facts into a `fact_sales` table.
+This solution simulates a retail sales analysis scenario:
 
-The project uses **Python**, **pandas**, **pymysql**, and **multithreading** for efficient processing.
+- **Star Schema Design**: Data is loaded into a Star Schema featuring `dim_customer`, `dim_product`, and the central `fact_sales` table.
+- **Hybrid Join**: Dimension data (customers, products) is loaded into memory (as Python dictionaries/hash tables). Transactional data is streamed in chunks, and dimension attributes are looked up in-memory for fast enrichment before being written to the `fact_sales` table.
+- **Technology Stack**: Python, pandas, and pymysql are used for ETL, while MySQL serves as the Data Warehouse repository.
 
----
+## 🛠️ Technology Stack
 
-## Prerequisites
+- **Python 3.10+** with pandas, pymysql
+- **MySQL Server**
+- **VS Code** (Recommended IDE)
 
-1. **Python 3.10+**  
-   Verify installation:
-   ```bash
-   python --version
-   
-### VS Code (recommended IDE)
 
-### Install required libraries
+## ⚙️ Installation and Setup
 
-## Project files:
+### Prerequisites
 
-customer_master_data.csv
+- Python 3.10+
+- MySQL Server instance (running and accessible)
 
-product_master_data.csv
+### 1. Install Required Libraries
 
-transactional_data.csv
+```bash
+pip install pandas pymysql
 
-datawearhouse.sql
+# 🔑 DATABASE CONFIGURATION (Update These Values)
+DB_CONFIG = {
+    'host': 'localhost',
+    'port': 3306,
+    'user': 'root',                    # Your MySQL Username
+    'password': 'your_secure_password', # Your MySQL Password
+    'database': 'retail_dw'
+}
