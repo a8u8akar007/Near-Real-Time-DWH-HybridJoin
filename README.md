@@ -57,3 +57,21 @@ The project includes a suite of OLAP queries (`queries.sql`) to derive business 
 ├── project_Report.docx    # Detailed documentation & performance analysis
 ├── transactional_data.csv # Source data (simulated stream)
 └── README.md              # Project documentation
+```
+
+## 🚀 How to Run
+### Prerequisites
+1. **Python 3.x**
+2. **MySQL Server**
+3. **Required Python libraries: pymysql, pandas**
+
+### Steps
+1. **Setup Database:**
+Run the script datawearhouse.sql in your MySQL workbench to create the schema and tables.
+2. **configure Connection:**
+Open HybridJoin.py. You can either update the MYSQL_CONF dictionary with your credentials or simply run the script and enter them when prompted.
+3. **Execute Pipeline:**
+**python HybridJoin.py**
+This will start the stream feeder and worker threads, processing the transactions and populating the DW.
+4. **Run Analysis:**
+Execute the SQL commands in queries.sql to view the analytics reports.
