@@ -73,5 +73,5 @@ Open HybridJoin.py. You can either update the MYSQL_CONF dictionary with your cr
 3. **Execute Pipeline:**
 **python HybridJoin.py**
 This will start the stream feeder and worker threads, processing the transactions and populating the DW.
-4. **Run Analysis:**
+5. **Run Analysis:**
 Execute the SQL commands in queries.sql to view the analytics reports.
