@@ -71,7 +71,7 @@ Run the script datawearhouse.sql in your MySQL workbench to create the schema an
 2. **configure Connection:**
 Open HybridJoin.py. You can either update the MYSQL_CONF dictionary with your credentials or simply run the script and enter them when prompted.
 3. **Execute Pipeline:**
-**python HybridJoin.py**
+   **python HybridJoin.py**
 This will start the stream feeder and worker threads, processing the transactions and populating the DW.
 5. **Run Analysis:**
 Execute the SQL commands in queries.sql to view the analytics reports.
